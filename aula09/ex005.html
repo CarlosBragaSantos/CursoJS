@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(69, 125, 230);
+            color: white;
+            font: normal 15pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos com DOM</h1>
+    <p>Aqui vai o resultado, toma essa!</p>
+    <div class="msg">Clique em mim!</div>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript!</p>
+
+    <script>
+
+        //Seleção por MARCA (P, H1, DIV E ETC)
+        var corpo = window.document.body
+        var p1=window.document.getElementsByTagName('p')[1]
+        //acima var e abaixo comando para executar 
+        corpo.style.background ='gray'
+        p1.style.color="red"
+
+        /*seleção por ID
+        var d =window.document.getElementById('msg')
+        d.style.background='green'
+        d.innerText='Estou aguardando!'
+        */
+
+        /*seleção por NAME
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText='Ola, Mundo'*/
+
+        /*seleção por CLASSE = CLASS
+        var d = window.document.getElementsByClassName('msg')[0]
+        d.innerText='Cambiamos'*/
+
+        //seleção por SELETOR = SELECTOR - ORIENTADO USAR NO LUGAR DOS OUTROS
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'Blue' 
+        
+
+        
+    </script>
+    
+</body>
+</html>
